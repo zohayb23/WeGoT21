@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale =1.0">
+        <meta charset="utf-8">
+        <title>WeGo | Login</title>
+        <link rel="stylesheet" href="..\static\login.css">
+    </head>
+
+    <body>
+        
+        <!-- Navigation Bar Section -->
+        <div class="logo">
+            <img src="..\static\WeGo.png">
+        </div>
+
+        <div class="nav-bar">
+            <ul class='nav-links'>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('services') }}">Services</a></li>
+                <li><a href="{{ url_for('register') }}">Create Account</a></li>
+            </ul>
+        </div> 
+        <hr class="nav">
+        <!-- End Navigation Bar-->
+
+        <div class="body-text">
+            <div class="container" id="loginAccount">
+                
+                {% block content %} 
+                <h1 class="welcome"><span>invisible text</span> Welcome Back To WeGo! <span>invisible text</span></h1>
+                <h1 class="form__title">Login</h1>
+                <!-- This is a blank area for us to talk to the user -->
+                {% if error %}
+                <p style="color: red;">{{ error }}</p>
+                {% endif %}
+
+                <div class="form__input-group"> 
+                    <form method="POST" action="{{ url_for('login') }}" class ="form" id="login">
+                        <label>Username/Email</label><br>
+                        <input id="username" name="username" type="text" placeholder="Enter Username">
+                        <label>Password</label><br>
+                        <input id="password" name="password" type="password" placeholder="Enter Password">
+                        <button id="form-send" type="submit" class="">Login</button>&nbsp;&nbsp;
+                    </form>
+                <div>
+                    <p class="form__text">
+                        <a href="{{ url_for('register') }}" id="linkCreateAccount" class="link">New? Create account.</a>
+                    </p>
+                </div> 
+                {% endblock %}
+                </div>
+                <!-- End Login Form -->
+            </div> <!-- End Class container -->
+        </div> <!-- End class body-text -->
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale =1.0">
+        <meta charset="utf-8">
+        <title>WeGo | Track Orders</title>
+        <link rel="stylesheet" href="..\static\tracking.css">
+        <script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js"></script>
+        <link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css"/>
+        <script src="https://api.mqcdn.com/sdk/place-search-js/v1.0.0/place-search.js"></script>
+        <link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/place-search-js/v1.0.0/place-search.css"/>
+    </head>
+
+    
+        <div class='heading'>
+            <h4> WeGo </h4>
+        </div>
+        <ul class='nav-links'>
+            <li><a href="{{ url_for('dashboard') }}">Account Home</a></li>
+        </ul>
+
+        <div class="body-text"> 
+            <h1>Tracking Page</h1>
+            <p>Order ID: {{ orderId }}</p>
+            <p>Status: {{ order.orderStatus }}</p>
+            <p>Pick-Up address: {{ order.pickupAddress }}</p>
+            <p>Delivery address: {{ order.deliveryAddress }}</p>
+            <p>Order placed on: {{ order.orderPlaced.strftime('%Y-%m-%d %H:%M:%S')  }}</p>
+            </div>
+
+        </div>
+        
+        <body style="border: 0; margin: 0;">
+            <div id="map" style="width: 50%; height: 200px;"></div>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <script src="{{ url_for('static', filename='js/route.js') }}"></script>
+         </body>
+</html>

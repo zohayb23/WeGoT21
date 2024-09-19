@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale =1.0">
+        <meta charset="utf-8">
+        <title>WeGo | Home</title>
+        <link rel="stylesheet" href="..\static\home.css">
+    </head>
+
+    <body class="nav">
+        <div class='heading'>
+            <h4> WeGo </h4>
+        </div>
+        <ul class='nav-links'>
+            <li></li><a href="{{ url_for('logout') }}">Logout</a></li>
+            <li></li><a href="{{ url_for('login') }}">Login</a></li>
+            <li></li><a href="{{ url_for('register') }}">Register</a></li>
+        </ul>
+        <div class="body-text"> 
+            <h1>Home Page</h1>
+        </div>
+    </body>
+</html>

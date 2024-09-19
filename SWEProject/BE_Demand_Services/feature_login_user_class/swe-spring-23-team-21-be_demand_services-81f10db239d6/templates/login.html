@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale =1.0">
+        <meta charset="utf-8">
+        <title>WeGo | Login</title>
+        <link rel="stylesheet" href="..\static\login.css">
+    </head>
+
+    <body>
+        
+        <div class='nav-bar'>
+            <h4> WeGo </h4>
+        <ul class='nav-links'>
+            <li><a href="./home.html">Home</a></li>
+        </ul>
+        </div>
+
+        <div class="body-text">
+            <div class="container" id="loginAccount">
+                    {% block content %}
+                    <h1 class="form__title">Login</h1>
+                    {% if error %}
+                    <p style="color: red;">{{ error }}</p>
+                    {% endif %}
+                    <div class="form__input-group"> 
+                        <form method="POST" action="{{ url_for('login') }}" class ="form" id="login">
+                            <input type="text" name="username" placeholder="Enter Username">
+                            <input type="password" name="password" placeholder="Enter Password">
+                            <button type="submit">Login</button>
+                        </form>
+                    {% endblock %}
+                    </div>
+                    <!-- End Login Form -->
+                    <!-- <div class="form__message--error">Incorrect Username or Password</div> -->
+                    
+                    <p class="form__text">
+                        <a href="./register.html" id="linkCreateAccount" class="link">New? Create account.</a>
+                    </p>
+                 
+            </div> <!-- End Class container -->
+        </div> <!-- End class body-text -->
+
+    </body>
+</html>

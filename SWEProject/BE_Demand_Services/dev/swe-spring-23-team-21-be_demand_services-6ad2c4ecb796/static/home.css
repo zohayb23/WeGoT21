@@ -1,0 +1,108 @@
+body {
+    --color-primary: #ff6100;
+    --color-secondary: #001052;
+    --color-tertiary: #055d06;
+    --color-accent: #62bd63;
+    --color-error: #ff0000ff;
+    --color-success: #055d06;
+
+    --border-radius: 11px;
+
+    margin:0;
+    padding:0;
+    height: 100vh;
+    font-family: Verdana, sans-serif;
+    overflow: auto;
+}
+
+/* NAVIGATION BAR */
+.logo img{
+    position: absolute;
+    float: left;
+    width: 182px;
+    height: 67px;
+    margin-top: 1%;
+}
+
+.nav-bar{
+    width: 100%;
+    height: 100px;
+    background-color: white;
+}
+.nav-links{
+    list-style: none;
+    float: right;
+    display: flex;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 2.5%;
+}
+
+li a{
+    color:#001052;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 20px 50px;
+}
+li a:hover{
+    background: #62bd63;
+}
+
+hr.nav{
+    margin-top: auto;
+    border-top: 3px solid #001052;
+    width: 100%;
+}
+
+/* PAGE HEADINGS */
+h1{
+    font-size: 58px;
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+h1.g{
+    color: #055d06;
+}
+h1.o{
+    color: #ff6100;
+}
+/* BODY TEXT */
+.body-text{
+    font-size: 20px;
+    text-align: center;
+}
+p{
+    text-align: center;
+    margin-bottom: 5%;
+    font-size: 20px;
+}
+
+/* BUTTONS */
+.button{
+    display: inline-block;
+    margin: 0 20px;
+    margin-bottom: 3%;
+}
+button{
+    height: 70px;
+    width: 200px;
+    font-size: large;
+    font-family: Verdana, sans-serif;
+    border-radius: 11px;
+    background-color: #001052;
+    color: white;
+}
+button:hover{
+    background-color: #404c7e;
+}
+a.learn-more{
+    color: #62bd63;
+    text-decoration: none;
+    font-weight: bold;
+}
+/* Horizontal Lines */
+hr{
+    border-top: 3px solid #001052;
+    width: 90%;
+}

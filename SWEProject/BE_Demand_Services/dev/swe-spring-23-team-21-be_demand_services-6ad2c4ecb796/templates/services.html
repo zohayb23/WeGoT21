@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale =1.0">
+        <meta charset="utf-8">
+        <title>WeGo | Services</title>
+        <link rel="stylesheet" href="..\static\services.css">
+    </head>
+
+    <body>
+<!-- Navigation Bar Section -->
+         <div class="logo">
+            <img src="..\static\WeGo.png">
+        </div>
+
+        <div class="nav-bar">
+            <ul class='nav-links'>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('login') }}">Login</a></li>
+                <li><a href="{{ url_for('register') }}">Create Account</a></li>
+            </ul>
+        </div> 
+        <hr class="nav">
+<!-- End Navigation Bar-->
+
+        <div class="body-text"> 
+            <h1>Services</h1>
+<!--Start Lab Sample Delivery Service-->
+            <h2>Lab Sample Delivery</h2>
+            <!-- Service Description -->
+            <p>We are revolutionizing the way medical facilities transport biological samples and
+                specimens with our autonomous vehicle service. Lab Sample Delivery offers
+                 closed and controlled environment reducing the risk of contamination and increasing efficiency.
+                 This service is for Lab Tech employees who work with the transporation of specimine for patient care.
+            </p>
+            <p class="features">Benefits and Features of Lab Sample Delivery:</p>
+            <ul>
+                <li>Autonomous vehicle transportation for biological samples and specimens.</li>
+                <li> Closed and controlled environment for reduced contamination and increased accuracy and reliability of medical test results.</li>
+                <li>On-demand scheduling, automated tracking, and
+                    cost-effective service for increased efficiency and
+                    security.</li>
+                <li>Improve patient care by reducing wait times, and
+                        providing optimal transportation conditions</li>
+            </ul>
+<!--End Lab Sample Delivery Service-->
+<!-- More Services Coming Soon-->
+        </div>
+    </body>
+</html>

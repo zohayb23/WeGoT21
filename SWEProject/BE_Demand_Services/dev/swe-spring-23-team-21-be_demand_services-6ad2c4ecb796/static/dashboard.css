@@ -1,0 +1,133 @@
+body {
+    --color-primary: #ff6100;
+    --color-secondary: #001052;
+    --color-tertiary: #055d06;
+    --color-accent: #62bd63;
+    --color-error: #ff0000ff;
+    --color-success: #055d06;
+
+    --border-radius: 11px;
+
+    margin:0;
+    height: 100vh;
+    font-family: Verdana, sans-serif;
+    color: #001052;
+    /* overflow: hidden; */
+}
+
+
+/* NAVIGATION BAR */
+.logo img{
+    position: absolute;
+    float: left;
+    width: 182px;
+    height: 67px;
+    margin-top: 1%;
+}
+
+.nav-bar{
+    width: 100%;
+    height: 100px;
+    background-color: white;
+}
+.nav-links{
+    list-style: none;
+    float: right;
+    display: flex;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 2.5%;
+}
+
+li a{
+    color:#001052;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 20px 50px;
+}
+li a:hover{
+    background: #62bd63;
+}
+
+hr.nav{
+    margin-top: auto;
+    border-top: 3px solid #001052;
+    width: 100%;
+}
+
+/* BODY TEXT */
+h1{
+    font-size: 56px;
+    text-align: center;
+}
+
+
+/* ORDERS SECTION */
+
+#orders-container{
+    width: 55%;
+    height: 400px;
+    outline-color: #ff6100;
+    outline-style: solid;
+    border-radius: 11px;
+    margin-left: 1%;
+    float: left
+}
+/* SERVICES SECTION */
+#services-container{
+    width: 40%;
+    height: 400px;
+    outline-color: #ff6100;
+    outline-style: solid;
+    border-radius: 11px;
+    margin-right: 1%;
+    display:block;
+    float: right;
+}
+
+#service{
+    text-decoration: none;
+    color: #001052;
+    width: 100%;
+    padding-left: 40px;
+}
+#learn-more{
+    text-decoration: none;
+    color: #62bd63;
+    padding-left: 45%;
+}
+
+/* ACCOUNT SECTION */
+#account-container{
+    display: flex;
+    height: 100px;
+    width: 98%;
+    outline-color: #ff6100;
+    outline-style: solid;
+    border-radius: 11px;
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 28%;
+}
+button{
+    height: 40px;
+    width: 100px;
+    background-color: #001052;
+    color: white;
+    border-radius: 11px;
+    /* margin-Left: 30%; */
+    margin-top: 2.5%;
+}
+h6{
+    padding: 20px 70px;
+    display: flex;
+}
+
+
+/* Headings */
+h2{
+    background-color: white;
+    position: absolute;
+    margin-left: 5%;
+    margin-top: -1%;
+}

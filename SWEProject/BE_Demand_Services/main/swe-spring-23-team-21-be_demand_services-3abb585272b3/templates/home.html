@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <!-- Set the viewport for responsive design -->
+        <meta name="viewport" content="width=device-width, initial-scale =1.0">
+        <!-- Set the character set of the page to utf-8 -->
+        <meta charset="utf-8">
+        <!-- Set the title of the page to WeGo | Home -->
+        <title>WeGo | Home</title>
+        <!-- Link the stylesheet to the HTML page -->
+        <link rel="stylesheet" href="..\static\home.css">
+    </head>
+
+    <body class="nav">
+
+        <!-- Navigation Bar Section -->
+        <!-- Add the WeGo logo in the navigation bar -->
+        <div class="logo">
+            <img src="..\static\WeGo.png">
+        </div>
+
+        <!-- Add navigation links in the navigation bar -->
+        <div class="nav-bar">
+            <ul class='nav-links'>
+                <li><a href=#welcome>Welcome</a></li>
+                <li><a href=#about>About</a></li>
+                <li><a href=#services>Services</a></li>
+                <li><a href="{{ url_for('login') }}">Login</a></li>
+                <li><a href="{{ url_for('register') }}">Create Account</a></li>
+            </ul>
+        </div> 
+        <!-- Add a horizontal rule after the navigation bar -->
+        <hr class="nav">
+        <!-- End Navigation Bar-->
+    
+        <!-- Start Webpage Content -->
+        <div class="body-text"> 
+            <!-- Welcome Message Section -->
+            <div class="welcome" id="welcome">   
+                <!-- Add a heading for the Welcome message -->
+                <h1 class="o">Welcome</h1>
+                <!-- Add a paragraph describing WeGo's mission -->
+                <p class="content"> Welcome to WeGo! Where we innovate to leverage software to provide unique &
+                    sustainable solutions for patients and
+                    healthcare professionals.
+                </p>
+                <!-- Add buttons for login and create account -->
+                <a href="{{ url_for('login') }}">Login</a>
+                <a href="{{ url_for('register') }}">Create Account</a>
+            </div>
+            <!-- Add a horizontal rule after the Welcome message section -->
+            <hr>
+            <!-- About Us Section-->
+            <div class="About-Us">
+                <!-- Add a heading for the About Us section -->
+                <h1 class="g" id="about">About Us</h1>
+                <!-- Add a paragraph describing WeGo's mission and partnership with GoGo -->
+                <p class="content">Here at WeGo, our mission is to create unique, high-value, first-of-a-kind transportation 
+                    software applications.
+                     We are committed to making a positive impact upon provider and patient health
+                    services. We are partnered with GoGo, which uniquely positions WeGo to incubate and scale software transportation services.
+                </p>
+            </div>
+            <!-- Add a horizontal rule after the About Us section -->
+            <hr>
+            <!-- Services Section-->
+            <div class="Services" id="services">
+                <!-- Add a heading for the Services section -->
+                <h1 class="o">Services</h1>
+                <!-- Add a paragraph listing the services provided by WeGo -->
+                <p class="content">Here at WeGo the services we offer are continuously expanding. Currently, here are the services we provide:</p>
+                <!-- Add a list of services -->
+                <p class="plugs">Lab Sample Delivery;</p>
+                <!-- Add a button to learn more -> navigates to services page -->
+                <a class="learn-more" href="{{ url_for('services') }}">Learn More</a>
+            </div>
+            <hr>
+    <!-- Login or Create Account -->
+            <h1 class="g">Get Started Now!</h1>
+            <a href="{{ url_for('login') }}">Login</a>
+            <a href="{{ url_for('register') }}">Create Account</a>
+            <hr>
+        </div>
+    <!-- Contact Us Section -->
+        <div class="contact-us" id="contact-us">
+            <h1 class="o">Contact Us</h1>
+            <p>Have questions or need support? Call at 123-456-7890 or email us at wegoservices@fakeemail.com</p>
+        </div>
+<!-- End Webpage Content -->
+    </body>
+</html>

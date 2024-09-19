@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>WeGo | Create Account</title>
+        <meta name="viewport" content="width=device-width, initial-scale =1.0">
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="..\static\register.css">
+    </head>
+
+    <body>
+       
+        {% block content %}
+        <h1>Welcome, {{ username }}!</h1>
+        <form method="POST" action="{{ url_for('logout') }}">
+            <button type="submit">Logout</button>
+        </form>
+        {% endblock %}
+        
+        
+            <title>Registration Result</title>
+        
+            <h1>{{ message }}</h1>
+        
+    </body>
+</html>

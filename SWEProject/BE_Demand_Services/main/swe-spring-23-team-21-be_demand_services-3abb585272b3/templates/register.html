@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>WeGo | Create Account</title>
+        <meta name="viewport" content="width=device-width, initial-scale =1.0">
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="..\static\register.css">
+        <script src="..\static\js\register.js"></script>
+    </head>
+
+    <body>
+<!-- Navigation Bar Section -->
+        <div class="logo">
+            <img src="..\static\WeGo.png">
+        </div>
+
+        <div class="nav-bar">
+            <ul class='nav-links'>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('services') }}">Services</a></li>
+                <li><a href="{{ url_for('login') }}">Login</a></li>
+            </ul>
+        </div> 
+        <hr class="nav">
+<!-- End Navigation Bar-->
+        <div class="body-text">
+            <div class="container" id="createAccount">
+                <form method="POST" action="{{ url_for('register') }}" class ="form" id="register">
+                <!-- {% block content %} Ask Anne for further details -->
+                    <h1 class="form__title">Create Account</h1>
+                    <div class="user-info">
+                        <div class="form--input-group"> 
+                            <label id="user-info">Create Username</label><br>
+                            <input name="username" type="text" placeholder="Enter Username" id="username"><br><br>
+                        </div>
+                        <div class="form--input-group">
+                            <label id="user-info">Create Password</label><br>
+                            <input name="password" type="password" placeholder="Enter Password" id="password"><br><br>
+                        </div>
+                        <div class="form--input-group">
+                            <label id="user-info">Re-enter Password</label><br>
+                            <input name="password" type="password" placeholder="Re-enter Password" id="confirm-password"><br><br>
+                        </div>
+                        <div class="form--input-group">
+                            <label id="user-info">Enter Email</label><br>
+                            <input name="email" type="email" placeholder="example@email.com" id="email"><br><br>
+                        </div>
+                        <div class="form--input-group">
+                            <label id="user-info">Enter Phone Number</label><br>
+                            <input name="number" type="number" placeholder="(123)-456-7890" id="phone"><br><br>
+                        </div>
+                    </div>
+                    <div id="msg">
+                        <!-- This is a blank area for us to talk to the user -->
+                        <!-- {% if error %}
+                        <p style="color: red;">{{ error }}</p>
+                        {% endif %} Ask Anne for further details -->
+                    <br>
+                    </div>
+                    <br>
+                    <button type="submit">Create Account</button> 
+                    <a href="{{ url_for('login') }}" id="linkLogin" class="link">Have an account? Login.</a>
+                <!-- {% endblock %} Ask Anne for further details -->
+                </form>
+                <h1 class="welcome"><span>invisible text invisible</span> Welcome To WeGo! <span>invisible text invisible</span></h1>
+            </div>
+        </div>
+        
+    </body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale =1.0">
+        <meta charset="utf-8">
+        <title>WeGo | Home</title>
+        <link rel="stylesheet" href="../static/dashboard.css">
+    </head>
+
+    <body>
+    {% block content %}
+<!-- Navigation Bar Section -->
+        <div class="logo">
+            <img src="../static/WeGo.png">
+        </div>
+
+        <div class="nav-bar">
+            <ul class='nav-links'>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <form method="POST" action="{{ url_for('logout') }}">
+                    <button type="submit">Logout</button>
+                </form>
+            </ul>
+        </div> 
+        <hr class="nav">
+<!-- End Navigation Bar-->
+
+        <div class="body-text"> 
+
+            <h1>Account Home</h1>
+            
+            <div class="top"></div>
+<!-- Start Order History -->
+            <h2>Order History</h2>
+            <br>
+            <br>
+            <div id="orders-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Order Status</th>
+                            <th>Order Price</th>
+                            <th>Order Code</th>
+                            <th>Order Placed on</th>
+                            <th>Pick-Up Address</th>
+                            <th>Delivery Address</th>
+                            <th>Delivered on</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for order in orders %}
+                        <tr>
+                            <td><a href="{{ url_for('track_order', order_id=order[0]) }}">{{ order[0] }}</a></td>
+                            <td>{{ order[5] }}</td>
+                            <td>{{ order[6] }}</td>
+                            <td>{{ order[7] }}</td>
+                            <td>{{ order[12] }}</td>
+                            <td>{{ order[14] }}</td>
+                            <td>{{ order[15] }}</td>
+                            <td>{{ order[13] }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+<!-- End Order History -->
+
+            <div id="services-container">
+                <h2>Services</h2>
+                <br>
+                <a href="{{ url_for('order') }}" id="service">Lab Sample Delivery</a>
+                <hr>
+                <br><br><br><br><br><br><br><br>
+                <br><br><br><br><br><br><br><br>
+                <a href="{{ url_for('services') }}" id="learn-more">Learn More</a>
+            </div>
+        </div>
+    
+        <div id="account-container">
+            <h2>Account Details</h2>
+            <div><p>Username: {{ username }}!</p></div>
+            <div><p>Email: {{ email }}</p></div>
+            <div><p>Phone: {{ phone }}</p></div>
+            <div><p>Password: ************</p></div>
+        </div>
+        
+    {% endblock %}
+    </body>
+</html>
